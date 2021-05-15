@@ -30,6 +30,7 @@ class Doctor{
 			designation="xxxx"; 
     		exp="xxxx";
 			contact=0;
+			
 		}
 		Doctor(string name,string designation,string exp,int contact)
 		{
