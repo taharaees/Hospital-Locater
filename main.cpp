@@ -276,24 +276,90 @@ int main()
 		}
 		else if(loc=="Nazimabad")
 		{
-			Location naz("Nazimabad", "Lifeline", "khjhkgjgkjh","tah","psyc","boha",00002,"medical","9AM-5PM");
-			naz.display();
+			Location naz1("Nazimabad", "Lifeline", "khjhkgjgkjh","tah","psyc","boha",00002,"medical","9AM-5PM");
+			Location naz2("Nazimabad", "Dr.Ziauddin Hospital","adadadadad","Ahmed","dentist","normal",0300,"mri","8AM-6PM");
+		    	Location naz3("Nazimabad", "Liaquat National","liaquat road","Kamran","cardiologist","jis school main tum prhte thy uskay principal ",333022289,"xray","8AM-8PM");
+			cout<<"1: "; 
+			naz1.display();
+			cout<<endl;
+			cout<<"2: "; 
+			naz2.display();
+			cout<<endl;
+			cout<<"3: "; 
+			naz3.display();
+			cout<<endl;
+			cout<<"ENTER NUMBER TO CHOOSE HOSPITAL"<<endl;
+			cin>>opt;
+			switch(opt)
+		    	{
+			    	case 1:
+			    	naz1.DocDisp();
+			    	break;
+			    	case 2:
+			    	naz2.DocDisp();
+				break;
+				case 3:
+				naz3.DocDisp();
+				break;
+			}
 		}
 		else if(loc=="Gulshan")
 		{
-			Location gul("Gulshan", "Medicare", "gfgfgfgf","ta","psy","boh",00003,"medical","7PM-9PM");
-			gul.display();
+			Location gul1("Gulshan", "Medicare", "gfgfgfgf","tayyab","general physician","you will be the first patient",00003,"medical","7PM-9PM");
+			Location gul2("Gulshan", "Agha Khan","adadadadad","ali","radiologist","high",2382839382,"mri","8AM-6PM");
+			Location gul3("Gulshan", "Liaquat National","ncc road","musawar","programmer", "normal",333022289,"xray","8AM-8PM");
+			cout<<"1: "; 
+			gul1.display();
+			cout<<endl;
+			cout<<"2: "; 
+			gul2.display();
+			cout<<endl;
+			cout<<"3: "; 
+			gul3.display();
+			cout<<endl;
+			cout<<"ENTER NUMBER TO CHOOSE HOSPITAL"<<endl;
+			cin>>opt;
+			switch(opt)
+			 {
+			    	case 1:
+			    	gul1.DocDisp();
+			    	break;
+			    	case 2:
+			    	gul2.DocDisp();
+				break;
+				case 3:
+				gul3.DocDisp();
+				break;
+			}
 		}
 		else if(loc=="Clifton")
 		{
-			Location clif("Clifton", "Parklane", "70 clifton","t","ps","bo",00004,"medical","2AM-7M");
-			clif.display();
-		}
-		else
-		{
-			cout<<"guru madir"<<endl;
-		}
-
+			Location clif1("Clifton", "Parklane", "70 clifton","muaaz","ps","high",00004,"medical","2AM-7M");
+			Location clif2("Clifton", "Altamash","shahrah e ghalib road","nashit","oncologists","highly experienced",2382856,"chemotherapy","8AM-6PM");
+		   	Location clif3("Clifton", "South city","shahrah e firdousi","sameer","neurologists", "high",3289,"blood tests","8AM-8PM");
+		   	cout<<"1: "; 
+		    	clif1.display();
+		    	cout<<endl;
+		    	cout<<"2: "; 
+		    	clif2.display();
+		    	cout<<endl;
+		    	cout<<"3: "; 
+		    	clif3.display();
+		   	cout<<endl;
+		   	cout<<"ENTER NUMBER TO CHOOSE HOSPITAL"<<endl;
+		   	cin>>opt;
+			switch(opt)
+		  	{
+			    	case 1:
+				clif1.DocDisp();
+			   	break;
+			   	case 2:
+			    	clif2.DocDisp();
+				break;
+				case 3:
+				clif3.DocDisp();
+				break;
+			}
 	}
 	//LABS
 	else
