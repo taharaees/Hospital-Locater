@@ -22,6 +22,31 @@ class Doctor
 		this->exp=exp;
 		this->contact=contact;
 	}
+	//setter functions
+	void setName(string n)
+	{
+		name=n;
+	}
+	void setDesig(string d)
+	{
+		designation=d;
+	}
+	void setExp(string e)
+	{
+		exp=e;
+	}
+	void setContact(int c)
+	{
+		contact=c;
+	}
+	// getter functions
+	void display()
+	{
+		cout<<"Name of doctor: "<<name<<endl;
+		cout<<"Designation: "<<designation<<endl;
+		cout<<"Experience: "<<exp<<endl;
+		cout<<"Contact: "<<contact<<endl;
+	}
 };
 class Lab
 {
@@ -58,7 +83,7 @@ class Hospital
 		this->address=address;
 		this->timing=timing;
 	}
-	
+
     //has a relation
 	Doctor d1;
 	Lab l1;
