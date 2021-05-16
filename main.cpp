@@ -129,10 +129,16 @@ class Hospital
 	//display function
 	void display()
 	{
-		cout << " Hospital Name: " << name<<endl;
+		cout << "Hospital Name: " << name<<endl;
 		cout << "Address: " << address<<endl;
-		d1.display();
+	}
+	void labDisp()
+	{
 		l1.display();
+	}
+	void DocDisp()
+	{
+		d1.display();
 	}
 };
 class Location
@@ -166,6 +172,14 @@ class Location
 	{
 		cout<<"Area is: "<<area<<endl;
 		h1.display();
+	}
+	void labDisp()
+	{
+		h1.labDisp();
+	}
+	void DocDisp()
+	{
+		h1.DocDisp();
 	}
 		
 };
@@ -221,34 +235,120 @@ class SpecializedHospital:public Hospital
 
 int main()
 {
-	string loc;
+	string loc, search;
+	int opt;
+	cout<<"Do you want to search for Hospital or Lab?"<<endl;
+	cin>>search;
+	//HOSPITALS
+	if(search=="Hospital")
+	{
+		cout<<"Enter Location: "<<endl;
+	    cin>>loc;
+		if(loc=="DHA")
+	    {
+		    Location dha1("DHA", "NMC","adadadadad","taha","psych","bohat",1,"mri","8AM-6PM");
+		    Location dha2("DHA", "Bayview","bay","Kamran","phys","boh",2,"xray","8AM-8PM");
+		    Location dha3("DHA", "NMC","adadadadad","anum","psycho","bo",3,"blood test","8AM-7PM");
+		    cout<<"1: "; 
+		    dha1.display();
+		    cout<<endl;
+		    cout<<"2: "; 
+		    dha2.display();
+		    cout<<endl;
+		    cout<<"3: "; 
+		    dha3.display();
+		    cout<<endl;
+		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL"<<endl;
+		    cin>>opt;
+		    switch(opt)
+		    {
+			    case 1:
+			    dha1.DocDisp();
+			    break;
+			    case 2:
+			    dha2.DocDisp();
+				break;
+				case 3:
+				dha3.DocDisp();
+				break;
 
-	cout<<"Enter Location: "<<endl;
-	cin>>loc;
+			}
+		}
+		else if(loc=="Nazimabad")
+		{
+			Location naz("Nazimabad", "Lifeline", "khjhkgjgkjh","tah","psyc","boha",00002,"medical","9AM-5PM");
+			naz.display();
+		}
+		else if(loc=="Gulshan")
+		{
+			Location gul("Gulshan", "Medicare", "gfgfgfgf","ta","psy","boh",00003,"medical","7PM-9PM");
+			gul.display();
+		}
+		else if(loc=="Clifton")
+		{
+			Location clif("Clifton", "Parklane", "70 clifton","t","ps","bo",00004,"medical","2AM-7M");
+			clif.display();
+		}
+		else
+		{
+			cout<<"guru madir"<<endl;
+		}
 
-	if(loc=="DHA")
-	{
-		Location dha("DHA", "NMC","adadadadad","taha","psych","bohat",00001,"medical","8AM-6PM");
-		dha.display();
 	}
-	else if(loc=="Nazimabad")
-	{
-		Location naz("Nazimabad", "Lifeline", "khjhkgjgkjh","tah","psyc","boha",00002,"medical","9AM-5PM");
-		naz.display();
-	}
-	else if(loc=="Gulshan")
-	{
-		Location gul("Gulshan", "Medicare", "gfgfgfgf","ta","psy","boh",00003,"medical","7PM-9PM");
-		gul.display();
-	}
-	else if(loc=="Clifton")
-	{
-		Location clif("Clifton", "Parklane", "70 clifton","t","ps","bo",00004,"medical","2AM-7M");
-		clif.display();
-	}
+	//LABS
 	else
 	{
-		cout<<"guru madir"<<endl;
+		cout<<"Enter Location: "<<endl;
+	    cin>>loc;
+		if(loc=="DHA")
+	    {
+		    Location dha1("DHA", "NMC","adadadadad","taha","psych","bohat",1,"mri","8AM-6PM");
+		    Location dha2("DHA", "Bayview","bay","Kamran","phys","boh",2,"xray","8AM-8PM");
+		    Location dha3("DHA", "NMC","adadadadad","anum","psycho","bo",3,"blood test","8AM-7PM");
+		    cout<<"1: Lab at Hospital: "; 
+		    dha1.display();
+		    cout<<endl;
+		    cout<<"2: Lab at Hospital:"; 
+		    dha2.display();
+		    cout<<endl;
+		    cout<<"3: Lab at Hospital:"; 
+		    dha3.display();
+		    cout<<endl;
+		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL LAB"<<endl;
+		    cin>>opt;
+		    switch(opt)
+		    {
+			    case 1:
+			    dha1.labDisp();
+			    break;
+			    case 2:
+			    dha2.labDisp();
+				break;
+				case 3:
+				dha3.labDisp();
+				break;		
+			}
+		}
+		else if(loc=="Nazimabad")
+		{
+			Location naz("Nazimabad", "Lifeline", "khjhkgjgkjh","tah","psyc","boha",00002,"medical","9AM-5PM");
+			naz.display();
+		}
+		else if(loc=="Gulshan")
+		{
+			Location gul("Gulshan", "Medicare", "gfgfgfgf","ta","psy","boh",00003,"medical","7PM-9PM");
+			gul.display();
+		}
+		else if(loc=="Clifton")
+		{
+			Location clif("Clifton", "Parklane", "70 clifton","t","ps","bo",00004,"medical","2AM-7M");
+			clif.display();
+		}
+		else
+		{
+			cout<<"guru madir"<<endl;
+		}	
 	}
+	
 	return 0;
 }
