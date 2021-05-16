@@ -45,7 +45,7 @@ class Lab
 	{
 		this->timing=timing;
 	}
-	void setfacilities(string facilities}
+	void setfacilities(string facilities)
 	{
 		this->facilities=facilities;
 	}	  
@@ -99,6 +99,20 @@ class Location
 		this->address=address;
 		this->city=city;
 	}
+		//setter
+	void set_address(string address)
+	{
+		this->address=address;
+	}
+	void set_city(string city)
+	{
+		this->city=city;
+	}
+	void display()
+	{
+		cout<<"Address is: "<<address;
+		cout<<"City is: "<<city;
+	}
 		
 };
 //Child classes of hospital
@@ -115,6 +129,15 @@ class GeneralHospital:public Hospital
     {
     	this->departments=departments;
 	}
+	//setter
+	void set_departments(string departments)
+	{
+		this->departments=departments;
+	}
+	void display()
+	{
+		cout<<"Department is: "<<departments;
+	}
 };
 class SpecializedHospital:public Hospital
 {
@@ -128,6 +151,15 @@ class SpecializedHospital:public Hospital
 	SpecializedHospital(string type,string name,string address,string timing): Hospital(name, address, timing)
 		{
 			this->type=type;
+		}
+		//Setter
+		void set_type(string type)
+		{
+			this->type=type;
+		}
+		void display()
+		{
+			cout<<"Type is: "<<type;
 		}
 };
 int main()
