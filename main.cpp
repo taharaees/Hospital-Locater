@@ -94,11 +94,16 @@ class Hospital
 	{
 		name="xxxx";
 		address="xxxx";
+		l1.setFacilities("xxxx");
+		l1.setTiming("xxxx");
 	}
-	Hospital(string name, string address, string n, string d, string e, int c)
+	Hospital(string name, string address, string n, string d, string e, int c,string f,string t)
 	{
 		this->name=name;
 		this->address=address;
+		//initializing lab variables
+		l1.setFacilities(f);
+		l1.setTiming(t);
 	}
 	public:
 		//setter functions
@@ -135,10 +140,10 @@ class Location
 		h1.setName("xxxx");
 		h1.setAddress("xxxx");
 	}
-	Location(string area, string name, string address, string dn,string des, string ex, int con)
+	Location(string area, string name, string address, string dn,string des, string ex, int con,string fa,string ti)
 	{
 		this->area=area;
-		Hospital h2(name,address,dn,des,ex,con);
+		Hospital h2(name,address,dn,des,ex,con,fa,ti);
 		h1=h2;
 	}
 	//setter
@@ -165,7 +170,7 @@ class GeneralHospital:public Hospital
 	{
 		departments="xxxx";
 	}
-    GeneralHospital(string departments,string name,string address,string timing, string dn,string des, string ex, int con): Hospital(name, address,dn,des,ex,con)
+    GeneralHospital(string departments,string name,string address,string timing, string dn,string des, string ex, int con,string fa,string ti): Hospital(name, address,dn,des,ex,con,fa,ti)
     {
     	this->departments=departments;
 	}
@@ -189,7 +194,7 @@ class SpecializedHospital:public Hospital
 		{
 			type="xxxx";
 		}
-	SpecializedHospital(string type,string name,string address,string timing, string dn,string des, string ex, int con): Hospital(name, address,dn,des,ex,con)
+	SpecializedHospital(string type,string name,string address,string timing, string dn,string des, string ex, int con,string fa,string ti): Hospital(name, address,dn,des,ex,con,fa,ti)
 		{
 			this->type=type;
 		}
@@ -214,20 +219,22 @@ int main()
 
 	if(loc=="DHA")
 	{
-		Location dha("DHA", "NMC","adadadadad","taha","psych","bohat",00001);
+		Location dha("DHA", "NMC","adadadadad","taha","psych","bohat",00001,"medical","8AM-6PM");
 		dha.display();
 	}
 	else if(loc=="Nazimabad")
 	{
-		Location naz("Nazimabad", "Lifeline", "khjhkgjgkjh","tah","psyc","boha",00002);
+		Location naz("Nazimabad", "Lifeline", "khjhkgjgkjh","tah","psyc","boha",00002,"medical","9AM-5PM");
+		naz.display();
 	}
 	else if(loc=="Gulshan")
 	{
-		Location gul("Gulshan", "Medicare", "gfgfgfgf","ta","psy","boh",00003);
+		Location gul("Gulshan", "Medicare", "gfgfgfgf","ta","psy","boh",00003,"medical","7PM-9PM");
+		gul.display();
 	}
 	else if(loc=="Clifton")
 	{
-		Location clif("Clifton", "Parklane", "70 clifton","t","ps","bo",00004);
+		Location clif("Clifton", "Parklane", "70 clifton","t","ps","bo",00004,"medical","2AM-7M");
 		clif.display();
 	}
 	else
