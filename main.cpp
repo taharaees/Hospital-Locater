@@ -170,7 +170,6 @@ class Location
 	//getter
 	void display()
 	{
-		cout<<"Area is: "<<area<<endl;
 		h1.display();
 	}
 	void labDisp()
@@ -246,9 +245,15 @@ int main()
 	    cin>>loc;
 		if(loc=="DHA")
 	    {
-		    Location dha1("DHA", "NMC","adadadadad","taha","psych","bohat",1,"mri","8AM-6PM");
-		    Location dha2("DHA", "Bayview","bay","Kamran","phys","boh",2,"xray","8AM-8PM");
-		    Location dha3("DHA", "NMC","adadadadad","anum","psycho","bo",3,"blood test","8AM-7PM");
+		    Location dha1("DHA", "NMC","adadadadad","taha","psych","bohat",111,"mri","8AM-6PM");
+			Location dha1A("DHA", "NMC","adadadadad","Malaecah","dermo","2yrs",222,"mri","8AM-6PM");
+			Location dha1B("DHA", "NMC","adadadadad","Alina","neuro","3yrs",333,"mri","8AM-6PM");
+		    Location dha2("DHA", "Bayview","bay","Kamran","phys","boh",444,"xray","8AM-8PM");
+			Location dha2A("DHA", "NMC","adadadadad","MTR","child","8yrs",555,"mri","8AM-6PM");
+			Location dha2B("DHA", "NMC","adadadadad","Altaf","psych","6yrs",666,"mri","8AM-6PM");
+		    Location dha3("DHA", "NMC","adadadadad","Aisha","Gyna","5yrs",777,"blood test","8AM-7PM");
+			Location dha3A("DHA", "NMC","adadadadad","Ali","child","4yrs",888,"mri","8AM-6PM");
+			Location dha3B("DHA", "NMC","adadadadad","Malaika","phys","2yrs",999,"mri","8AM-6PM");
 		    cout<<"1: "; 
 		    dha1.display();
 		    cout<<endl;
@@ -260,25 +265,47 @@ int main()
 		    cout<<endl;
 		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL"<<endl;
 		    cin>>opt;
+			cout<<endl;
 		    switch(opt)
 		    {
 			    case 1:
 			    dha1.DocDisp();
+				cout<<endl;
+				dha1A.DocDisp();
+				cout<<endl;
+				dha1B.DocDisp();
+				cout<<endl;
 			    break;
 			    case 2:
 			    dha2.DocDisp();
+				cout<<endl;
+				dha2A.DocDisp();
+				cout<<endl;
+				dha2B.DocDisp();
+				cout<<endl;
 				break;
 				case 3:
 				dha3.DocDisp();
+				cout<<endl;
+				dha3A.DocDisp();
+				cout<<endl;
+				dha3B.DocDisp();
+				cout<<endl;
 				break;
 
 			}
 		}
 		else if(loc=="Nazimabad")
 		{
-			Location naz1("Nazimabad", "Lifeline", "khjhkgjgkjh","tah","psyc","boha",00002,"medical","9AM-5PM");
-			Location naz2("Nazimabad", "Dr.Ziauddin Hospital","adadadadad","Ahmed","dentist","normal",0300,"mri","8AM-6PM");
-		    	Location naz3("Nazimabad", "Liaquat National","liaquat road","Kamran","cardiologist","jis school main tum prhte thy uskay principal ",333022289,"xray","8AM-8PM");
+			Location naz1("Nazimabad", "Lifeline", "khjhkgjgkjh","Hina","psyc","5yrs",111,"medical","9AM-5PM");
+			Location naz1A("Nazimabad", "Lifeline", "khjhkgjgkjh","Alia","psyc","7yrs",222,"medical","9AM-5PM");
+			Location naz1B("Nazimabad", "Lifeline", "khjhkgjgkjh","Imran","psyc","3yrs",333,"medical","9AM-5PM");
+			Location naz2("Nazimabad", "Ziauddin Hospital","adadadadad","Ahmed","dentist","normal",444,"mri","8AM-6PM");
+			Location naz2A("Nazimabad", "Lifeline", "khjhkgjgkjh","Blah","child","2yrs",555,"medical","9AM-5PM");
+			Location naz2B("Nazimabad", "Lifeline", "khjhkgjgkjh","tah","dermo","5yrs",666,"medical","9AM-5PM");
+		    Location naz3("Nazimabad", "Liaquat National","liaquat road","Kamran","cardiologist","jis school main tum prhte thy uskay principal",333022289,"xray","8AM-8PM");
+			Location naz3A("Nazimabad", "Lifeline", "khjhkgjgkjh","Gumnaam","psyc","2yrs",00002,"medical","9AM-5PM");
+			Location naz3B("Nazimabad", "Lifeline", "khjhkgjgkjh","Gumnaam2","physio","5yrs",00002,"medical","9AM-5PM");
 			cout<<"1: "; 
 			naz1.display();
 			cout<<endl;
@@ -290,16 +317,32 @@ int main()
 			cout<<endl;
 			cout<<"ENTER NUMBER TO CHOOSE HOSPITAL"<<endl;
 			cin>>opt;
+			cout<<endl;
 			switch(opt)
-		    	{
-			    	case 1:
-			    	naz1.DocDisp();
-			    	break;
-			    	case 2:
-			    	naz2.DocDisp();
+		    {
+				case 1:
+				naz1.DocDisp();
+				cout<<endl;
+				naz1A.DocDisp();
+				cout<<endl;
+				naz1B.DocDisp();
+				cout<<endl;
+				break;
+				case 2:
+				naz2.DocDisp();
+				cout<<endl;
+				naz2A.DocDisp();
+				cout<<endl;
+				naz2B.DocDisp();
+				cout<<endl;
 				break;
 				case 3:
 				naz3.DocDisp();
+				cout<<endl;
+				naz3A.DocDisp();
+				cout<<endl;
+				naz3B.DocDisp();
+				cout<<endl;
 				break;
 			}
 		}
@@ -319,13 +362,14 @@ int main()
 			cout<<endl;
 			cout<<"ENTER NUMBER TO CHOOSE HOSPITAL"<<endl;
 			cin>>opt;
+			cout<<endl;
 			switch(opt)
 			 {
-			    	case 1:
-			    	gul1.DocDisp();
-			    	break;
-			    	case 2:
-			    	gul2.DocDisp();
+			    case 1:
+			    gul1.DocDisp();
+			    break;
+			    case 2:
+			    gul2.DocDisp();
 				break;
 				case 3:
 				gul3.DocDisp();
@@ -334,30 +378,52 @@ int main()
 		}
 		else if(loc=="Clifton")
 		{
-			Location clif1("Clifton", "Parklane", "70 clifton","muaaz","ps","high",00004,"medical","2AM-7M");
-			Location clif2("Clifton", "Altamash","shahrah e ghalib road","nashit","oncologists","highly experienced",2382856,"chemotherapy","8AM-6PM");
-		   	Location clif3("Clifton", "South city","shahrah e firdousi","sameer","neurologists", "high",3289,"blood tests","8AM-8PM");
+			Location clif1("Clifton", "Parklane", "70 clifton","muaaz","Psychic","2yrs",1111,"medical","2AM-7M");
+			Location clif1A("Clifton", "Parklane", "70 clifton","hahaha","Hakeem","3yrs",2222,"medical","2AM-7M");
+			Location clif1B("Clifton", "Parklane", "70 clifton","lol","dermo","3yrs",33333,"medical","2AM-7M");
+			Location clif2("Clifton", "Altamash","shahrah e ghalib road","nashit","oncologists","2yrs",2382856,"chemotherapy","8AM-6PM");
+			Location clif2A("Clifton", "Parklane", "70 clifton","Sahab","psych","6yrs",00004,"medical","2AM-7M");
+			Location clif2B("Clifton", "Parklane", "70 clifton","VIP","physio","5yrs",00004,"medical","2AM-7M");
+		   	Location clif3("Clifton", "South city","shahrah e firdousi","sameer","neurologists", "1yr",3289,"blood tests","8AM-8PM");
+			Location clif3A("Clifton", "Parklane", "70 clifton","Amitabh","FilmonWala","6yrs",00004,"medical","2AM-7M");
+			Location clif3B("Clifton", "Parklane", "70 clifton","grey","gyno","8yrs",00004,"medical","2AM-7M");
 		   	cout<<"1: "; 
-		    	clif1.display();
-		    	cout<<endl;
-		    	cout<<"2: "; 
-		    	clif2.display();
-		    	cout<<endl;
-		    	cout<<"3: "; 
-		    	clif3.display();
+		    clif1.display();
+		    cout<<endl;
+		    cout<<"2: "; 
+		    clif2.display();
+		    cout<<endl;
+		    cout<<"3: "; 
+		    clif3.display();
 		   	cout<<endl;
 		   	cout<<"ENTER NUMBER TO CHOOSE HOSPITAL"<<endl;
 		   	cin>>opt;
+			cout<<endl;
 			switch(opt)
 		  	{
-			    	case 1:
+			    case 1:
 				clif1.DocDisp();
+				cout<<endl;
+				clif1A.DocDisp();
+				cout<<endl;
+				clif1B.DocDisp();
+				cout<<endl;
 			   	break;
 			   	case 2:
-			    	clif2.DocDisp();
+			    clif2.DocDisp();
+				cout<<endl;
+				clif2A.DocDisp();
+				cout<<endl;
+				clif2B.DocDisp();
+				cout<<endl;
 				break;
 				case 3:
 				clif3.DocDisp();
+				cout<<endl;
+				clif3A.DocDisp();
+				cout<<endl;
+				clif3B.DocDisp();
+				cout<<endl;
 				break;
 			}
 	}
@@ -386,19 +452,17 @@ int main()
 		    cout<<endl;
 		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL LAB"<<endl;
 		    cin>>opt;
+			cout<<endl;
 		    switch(opt)
 		    {
 			    case 1:
 			    dha1.labDisp();
-			    dha1.DocDisp();
 			    break;
 			    case 2:
 			    dha2.labDisp();
-			     dha2.DocDisp();
 				break;
 				case 3:
 				dha3.labDisp();
-				 dha3.DocDisp();
 				break;		
 			}
 		}
@@ -419,19 +483,17 @@ int main()
 		    cout<<endl;
 		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL LAB"<<endl;
 		    cin>>opt;
+			cout<<endl;
 		    switch(opt)
 		    {
 			    case 1:
 			    naz1.labDisp();
-			    naz1.DocDisp();
 			    break;
 			    case 2:
 			    naz2.labDisp();
-			    naz2.DocDisp();
 				break;
 				case 3:
 				naz3.labDisp();
-				naz3.DocDisp();
 				break;		
 			}
 		}
@@ -451,19 +513,17 @@ int main()
 		    cout<<endl;
 		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL LAB"<<endl;
 		    cin>>opt;
+			cout<<endl;
 		    switch(opt)
 		    {
 			    case 1:
 			    gul1.labDisp();
-			    gul1.DocDisp();
 			    break;
 			    case 2:
 			    gul2.labDisp();
-			    gul2.DocDisp();
 				break;
 				case 3:
 				gul3.labDisp();
-				gul3.DocDisp();
 				break;		
 			}
 			
@@ -484,19 +544,17 @@ int main()
 		    cout<<endl;
 		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL LAB"<<endl;
 		    cin>>opt;
+			cout<<endl;
 		    switch(opt)
 		    {
 			    case 1:
 			    clif1.labDisp();
-			    clif1.DocDisp();
 			    break;
 			    case 2:
 			    clif2.labDisp();
-			    clif3.DocDisp();
 				break;
 				case 3:
 				clif3.labDisp();
-				clif3.DocDisp();
 				break;		
 			}
 					}
@@ -509,4 +567,3 @@ int main()
 	return 0;
 
 }
-
