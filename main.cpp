@@ -104,6 +104,30 @@ class Hospital
     //has a relation
 	Doctor d1;
 	Lab l1;
+	
+	
+	public:
+		//setter functions
+	void setname(string name)
+	{
+		this->name=name;
+	}
+	void setaddress(string address)
+	{
+		this->address=address;
+	}
+	void settiming(string timing)
+	{
+		this->timing=timing;
+	}
+	
+	//display function
+	void display()
+	{
+		cout << "Name: " << name;
+		cout << "Address: " << address;
+		cout << "Timings: " << timing;
+	}
 };
 class Location
 {
