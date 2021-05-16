@@ -361,6 +361,7 @@ int main()
 				break;
 			}
 	}
+}
 	//LABS
 	else
 	{
@@ -506,4 +507,6 @@ int main()
 	}
 	
 	return 0;
+
 }
+
