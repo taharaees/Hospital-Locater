@@ -302,17 +302,20 @@ int main()
 	    cin>>loc;
 		if(loc=="DHA")
 	    {
-		    Location dha1("DHA", "NMC","adadadadad","taha","psych","bohat",1,"mri","8AM-6PM");
-		    Location dha2("DHA", "Bayview","bay","Kamran","phys","boh",2,"xray","8AM-8PM");
-		    Location dha3("DHA", "NMC","adadadadad","anum","psycho","bo",3,"blood test","8AM-7PM");
+		    Location dha1("DHA", "NMC","adadadadad","taha","Attendant","bohat",1,"mri","8AM-6PM");
+		    Location dha2("DHA", "Bayview","bay","Kamran","Attendant","1 month",2,"xray","8AM-8PM");
+		    Location dha3("DHA", "NMC","adadadadad","anum","Senior nurse","11 years",3,"blood test","8AM-7PM");
 		    cout<<"1: Lab at Hospital: "; 
 		    dha1.display();
+		    
 		    cout<<endl;
 		    cout<<"2: Lab at Hospital:"; 
 		    dha2.display();
+		   
 		    cout<<endl;
 		    cout<<"3: Lab at Hospital:"; 
 		    dha3.display();
+		   
 		    cout<<endl;
 		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL LAB"<<endl;
 		    cin>>opt;
@@ -320,30 +323,116 @@ int main()
 		    {
 			    case 1:
 			    dha1.labDisp();
+			    dha1.DocDisp();
 			    break;
 			    case 2:
 			    dha2.labDisp();
+			     dha2.DocDisp();
 				break;
 				case 3:
 				dha3.labDisp();
+				 dha3.DocDisp();
 				break;		
 			}
 		}
 		else if(loc=="Nazimabad")
+		
 		{
-			Location naz("Nazimabad", "Lifeline", "khjhkgjgkjh","tah","psyc","boha",00002,"medical","9AM-5PM");
-			naz.display();
+			Location naz1("Nazimabad", "Lifeline lab", "khjhkgjgkjh","Maqbool Hussain","Nurse","9 months",00002,"vaccination","9AM-5PM");
+			 Location naz2("Nazimabad", "Ziauddin lab","fvefvfdvdfvdfv","Ali Raza","Nurse","3 years",2,"ultra sound","8AM-8PM");
+		    Location naz3("Nazimabad", "Esaa lab","avfvfvf","Zainab khan","Nurse","9 years",3,"blood test","8AM-7PM");
+		    cout<<"1: Lab at Hospital: "; 
+		    naz1.display();
+		    cout<<endl;
+		    cout<<"2: Lab at Hospital:"; 
+		    naz2.display();
+		    cout<<endl;
+		    cout<<"3: Lab at Hospital:"; 
+		    naz3.display();
+		    cout<<endl;
+		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL LAB"<<endl;
+		    cin>>opt;
+		    switch(opt)
+		    {
+			    case 1:
+			    naz1.labDisp();
+			    naz1.DocDisp();
+			    break;
+			    case 2:
+			    naz2.labDisp();
+			    naz2.DocDisp();
+				break;
+				case 3:
+				naz3.labDisp();
+				naz3.DocDisp();
+				break;		
+			}
 		}
 		else if(loc=="Gulshan")
 		{
-			Location gul("Gulshan", "Medicare", "gfgfgfgf","ta","psy","boh",00003,"medical","7PM-9PM");
-			gul.display();
+			Location gul1("Gulshan", "Medicare", "gfgfgfgf","Alina khan","Attendant","5 years",00003,"vaccination","7PM-9PM");
+		    Location gul2("Gulshan", "Chughtai lab","fvefvfdvdfvdfv","Maryam Raza","Nure","6 year",2,"ultra sound","8AM-8PM");
+		    Location gul3("Gulshan", "Aga khan lab","avfvfvf","Fatima Aamir","Nurse","8 month",3,"blood test","8AM-7PM");
+		    cout<<"1: Lab at Hospital: "; 
+		    gul1.display();
+		    cout<<endl;
+		    cout<<"2: Lab at Hospital:"; 
+		    gul2.display();
+		    cout<<endl;
+		    cout<<"3: Lab at Hospital:"; 
+		    gul3.display();
+		    cout<<endl;
+		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL LAB"<<endl;
+		    cin>>opt;
+		    switch(opt)
+		    {
+			    case 1:
+			    gul1.labDisp();
+			    gul1.DocDisp();
+			    break;
+			    case 2:
+			    gul2.labDisp();
+			    gul2.DocDisp();
+				break;
+				case 3:
+				gul3.labDisp();
+				gul3.DocDisp();
+				break;		
+			}
+			
 		}
 		else if(loc=="Clifton")
 		{
-			Location clif("Clifton", "Parklane", "70 clifton","t","ps","bo",00004,"medical","2AM-7M");
-			clif.display();
-		}
+			Location clif1("Clifton", "Dow lab", "rfrgergegegre","Ifrah Adil","nurse","3 years",00004,"Vaccination","2AM-7M");
+			Location clif2("Clifton", "Chughtai lab branch 2","fvefvfdvdfvdfv","Muqaddas Imran","Nurse","1 year",2,"ultra sound","8AM-8PM");
+		    Location clif3("Clifton", "DOW lab","avfvfvf","Wasim Ali","Attendant","2 years",3,"blood test","8AM-7PM");
+		    cout<<"1: Lab at Hospital: "; 
+		    clif1.display();
+		    cout<<endl;
+		    cout<<"2: Lab at Hospital:"; 
+		    clif2.display();
+		    cout<<endl;
+		    cout<<"3: Lab at Hospital:"; 
+		    clif3.display();
+		    cout<<endl;
+		    cout<<"ENTER NUMBER TO CHOOSE HOSPITAL LAB"<<endl;
+		    cin>>opt;
+		    switch(opt)
+		    {
+			    case 1:
+			    clif1.labDisp();
+			    clif1.DocDisp();
+			    break;
+			    case 2:
+			    clif2.labDisp();
+			    clif3.DocDisp();
+				break;
+				case 3:
+				clif3.labDisp();
+				clif3.DocDisp();
+				break;		
+			}
+					}
 		else
 		{
 			cout<<"guru madir"<<endl;
