@@ -96,6 +96,10 @@ class Hospital
 		address="xxxx";
 		l1.setFacilities("xxxx");
 		l1.setTiming("xxxx");
+		d1.setName("xxxx");
+		d1.setDesig("xxxx");
+		d1.setExp("xxxx");
+		d1.setContact(000);
 	}
 	Hospital(string name, string address, string n, string d, string e, int c,string f,string t)
 	{
@@ -104,6 +108,11 @@ class Hospital
 		//initializing lab variables
 		l1.setFacilities(f);
 		l1.setTiming(t);
+		
+		d1.setName(n);
+		d1.setDesig(d);
+		d1.setExp(e);
+		d1.setContact(c);
 	}
 	public:
 		//setter functions
