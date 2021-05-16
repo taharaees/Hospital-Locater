@@ -39,6 +39,23 @@ class Lab
 		this->timing=timing;
 		this->facilities=facilities;
 	}
+	public:
+	//setter functions
+	void settiming(string timing)
+	{
+		this->timing=timing;
+	}
+	void setfacilities(string facilities}
+	{
+		this->facilities=facilities;
+	}	  
+	//display functions
+	void display()
+	{
+		cout << "Timings: " << timing;
+		cout << "Facilities: " << facilities;
+	}
+
 };
 class Hospital
 {
