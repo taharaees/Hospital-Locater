@@ -183,30 +183,6 @@ class Location
 		
 };
 //Child classes of hospital
-class GeneralHospital:public Hospital
-{
-    string departments;
-    public:
-	//Constructors
-	GeneralHospital():Hospital()
-	{
-		departments="xxxx";
-	}
-    GeneralHospital(string departments,string name,string address,string timing, string dn,string des, string ex, int con,string fa,string ti): Hospital(name, address,dn,des,ex,con,fa,ti)
-    {
-    	this->departments=departments;
-	}
-	//setter
-	void setDepartments(string departments)
-	{
-		this->departments=departments;
-	}
-	//getter
-	void display()
-	{
-		cout<<"Department is: "<<departments<<endl;
-	}
-};
 class SpecializedHospital:public Hospital
 {
 	string type;
