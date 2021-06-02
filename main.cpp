@@ -276,7 +276,8 @@ int main()
 				dha3B.DocDisp();
 				cout<<endl;
 				break;
-
+				default:
+					cout << "Invalid option selected";
 			}
 		}
 		else if(loc=="Nazimabad"||loc=="nazimabad")
@@ -328,6 +329,8 @@ int main()
 				naz3B.DocDisp();
 				cout<<endl;
 				break;
+				default:
+					cout << "Invalid option selected";
 			}
 		}
 		else if(loc=="Gulshan"||loc=="gulshan")
@@ -358,6 +361,8 @@ int main()
 				case 3:
 				gul3.DocDisp();
 				break;
+				default:
+					cout << "Invalid option selected";
 			}
 		}
 		else if(loc=="Clifton"||loc=="clifton")
@@ -409,11 +414,17 @@ int main()
 				clif3B.DocDisp();
 				cout<<endl;
 				break;
+				default:
+					cout << "Invalid option selected";
 			}
-	}
+		}
+		else
+		{
+			cout<<"Invalid Location for Hospitals selected. \nNo such location exits."<<endl;
+		}	
 }
 	//LABS
-	else
+	else if(search=="Lab" || "lab")
 	{
 		cout<<"Enter Location: "<<endl;
 	    cin>>loc;
@@ -447,7 +458,9 @@ int main()
 				break;
 				case 3:
 				dha3.labDisp();
-				break;		
+				break;	
+				default:
+					cout << "Invalid option selected";	
 			}
 		}
 		else if(loc=="Nazimabad"||loc=="nazimabad")
@@ -478,7 +491,9 @@ int main()
 				break;
 				case 3:
 				naz3.labDisp();
-				break;		
+				break;	
+				default:
+					cout << "Invalid option selected";	
 			}
 		}
 		else if(loc=="Gulshan"||loc=="gulshan")
@@ -508,7 +523,9 @@ int main()
 				break;
 				case 3:
 				gul3.labDisp();
-				break;		
+				break;	
+				default:
+					cout << "Invalid option selected";	
 			}
 			
 		}
@@ -539,15 +556,16 @@ int main()
 				break;
 				case 3:
 				clif3.labDisp();
-				break;		
+				break;	
+				default:
+					cout << "Invalid option selected";	
 			}
 					}
 		else
 		{
-			cout<<"guru madir"<<endl;
+			cout<<"Invalid Location for Labs selected. \nNo such location exits."<<endl;
 		}	
 	}
 	
 	return 0;
-
 }
